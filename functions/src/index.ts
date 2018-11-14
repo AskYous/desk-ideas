@@ -1,8 +1,8 @@
-import * as functions from 'firebase-functions';
+import * as functions from "firebase-functions";
+import { BoxConfig } from "../../box.config";
+import querystring = require("querystring"); // Querystring stringifier
+const boxSDK = BoxConfig.boxSDK; // Box SDK
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+export const helloWorld = functions.https.onRequest((req, res) => {
+    res.send("Hello from desk-ideas");
+});
